@@ -1,4 +1,3 @@
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -22,13 +21,5 @@ function App() {
     </div>
   );
 }
-
-function render(){
-  const title =<h1>Bosalutns</h1>
-  ReactDOM.render(title, document.querySelector('#root'))
-}
-
-render()
-
 
 export default App;
