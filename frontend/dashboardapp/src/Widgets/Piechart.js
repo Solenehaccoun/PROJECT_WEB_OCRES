@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import {
-  PieChart, Pie, Sector, Cell,
+  PieChart, Pie, Sector, Cell, ResponsiveContainer
 } from 'recharts';
 
 const data = [
@@ -32,6 +32,8 @@ export default class Example extends PureComponent {
 
   render() {
     return (
+
+      <ResponsiveContainer  height="25%">
       <PieChart width={400} height={400}>
         <Pie
           data={data}
@@ -48,6 +50,7 @@ export default class Example extends PureComponent {
           }
         </Pie>
       </PieChart>
+      </ResponsiveContainer>
     );
   }
 }

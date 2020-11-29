@@ -21,15 +21,15 @@ class Widget1 extends React.Component {
 
     render() {
         return (
-            <ResponsiveContainer>
-            <div className="chart">
+            <ResponsiveContainer  height="25%">
+         
                 <LineChart width={600} height={300} data={this.state.chartData}>
                     <Line type="monotone" dataKey="nbListen" stroke="#8884d8" />
                     <CartesianGrid stroke="#ccc" />
                     <XAxis dataKey="name" />
                     <YAxis />
                 </LineChart>
-            </div>
+
             </ResponsiveContainer>
         );
     }
