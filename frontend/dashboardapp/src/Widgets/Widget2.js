@@ -20,7 +20,8 @@ class Widget2 extends React.Component {
 
     render() {
         return (
-            <div className="chart">
+
+            <ResponsiveContainer  height="25%" >
                  <RadarChart cx={300} cy={250} outerRadius={150} width={500} height={500} data={this.state.chartData}>
                     <PolarGrid />
                     <PolarAngleAxis dataKey="continent" />
@@ -28,7 +29,7 @@ class Widget2 extends React.Component {
                     <Tooltip />
                     <Radar name="Nombre d'écoutes en millions" dataKey="nbListen" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
                 </RadarChart>
-            </div>
+            </ResponsiveContainer>
         );
     }
 

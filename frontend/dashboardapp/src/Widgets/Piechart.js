@@ -32,6 +32,8 @@ export default class Example extends PureComponent {
 
   render() {
     return (
+
+      <ResponsiveContainer  height="25%">
       <PieChart width={400} height={400}>
         <Legend />
         
@@ -51,6 +53,7 @@ export default class Example extends PureComponent {
           }
         </Pie>
       </PieChart>
+      </ResponsiveContainer>
     );
   }
 }

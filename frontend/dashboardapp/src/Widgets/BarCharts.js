@@ -21,6 +21,7 @@ class BarCharts extends React.Component {
 
     render() {
         return (
+            
             <ResponsiveContainer>
             <div className="chart">
                 <BarChart
@@ -39,7 +40,7 @@ class BarCharts extends React.Component {
                     <CartesianGrid strokeDasharray="3 3" />
                     <Bar name="nombre d'écoutes" dataKey="value" fill="#8884d8" background={{ fill: '#eee' }} />
                 </BarChart>
-            </div>
+           
             </ResponsiveContainer>
         );
     }

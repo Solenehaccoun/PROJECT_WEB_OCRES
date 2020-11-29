@@ -1,9 +1,10 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 
 
 export default class Compteur extends React.Component {
 
-    
+
     constructor(props) {
       super(props);
       this.state = { seconds: 0 };
@@ -32,7 +33,4 @@ export default class Compteur extends React.Component {
     }
   }
   
-  ReactDOM.render(
-    <Timer />,
-    document.getElementById('timer-example')
-  );
+  
