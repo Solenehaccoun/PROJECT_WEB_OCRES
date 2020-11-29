@@ -15,3 +15,4 @@ Inspirez-vous des grands repos open sources qui existent sur github. Les informa
 Potentiellement à ajouter dans dossier dashboard avant que le code fonctionne : 
 npm install recharts
 npm install react-router-dom
+npm install react-icons --save

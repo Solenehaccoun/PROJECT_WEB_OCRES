@@ -1,5 +1,5 @@
 import React from 'react'
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, ResponsiveContainer, Legend, Tooltip } from 'recharts';
 
 class Widget1 extends React.Component {
 
@@ -24,10 +24,12 @@ class Widget1 extends React.Component {
             <ResponsiveContainer>
             <div className="chart">
                 <LineChart width={600} height={300} data={this.state.chartData}>
-                    <Line type="monotone" dataKey="nbListen" stroke="#8884d8" />
+                    <Line type="monotone" name="Nombre d'écoutes (en Millions)" dataKey="nbListen" stroke="#8884d8" />
                     <CartesianGrid stroke="#ccc" />
                     <XAxis dataKey="name" />
                     <YAxis />
+                    <Legend />
+                    <Tooltip />
                 </LineChart>
             </div>
             </ResponsiveContainer>
