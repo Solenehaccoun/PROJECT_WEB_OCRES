@@ -1,8 +1,5 @@
 import React, { PureComponent } from 'react';
-import {
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
-} from 'recharts';
-
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 class BarCharts extends React.Component {
 
@@ -14,16 +11,13 @@ class BarCharts extends React.Component {
                 {name:'Dua Lipa', value: 1500},
                 {name:'Black Pumas', value: 2000},
                 {name:'Tokyo Hotel', value: 800},
-                ]
-            }
-        }
+            ]
+         }
+    }
     
 
     render() {
         return (
-            
-            <ResponsiveContainer>
-            <div className="chart">
                 <BarChart
                             width={500}
                             height={300}
@@ -40,8 +34,6 @@ class BarCharts extends React.Component {
                     <CartesianGrid strokeDasharray="3 3" />
                     <Bar name="nombre d'écoutes" dataKey="value" fill="#8884d8" background={{ fill: '#eee' }} />
                 </BarChart>
-           
-            </ResponsiveContainer>
         );
     }
 

@@ -21,7 +21,7 @@ class Widget1 extends React.Component {
 
     render() {
         return (
-            <ResponsiveContainer  height="25%">
+            //<ResponsiveContainer  height="25%">
          
                 <LineChart width={600} height={300} data={this.state.chartData}>
                     <Line type="monotone" name="Nombre d'écoutes (en Millions)" dataKey="nbListen" stroke="#8884d8" />
@@ -32,7 +32,7 @@ class Widget1 extends React.Component {
                     <Tooltip />
                 </LineChart>
 
-            </ResponsiveContainer>
+            //</ResponsiveContainer>
         );
     }
 
