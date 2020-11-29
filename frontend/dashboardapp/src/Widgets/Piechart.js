@@ -1,13 +1,13 @@
 import React, { PureComponent } from 'react';
 import {
-  PieChart, Pie, Sector, Cell, ResponsiveContainer
+  PieChart, Pie, Sector, Cell, Legend,
 } from 'recharts';
 
 const data = [
-  { name: 'Group A', value: 400 },
-  { name: 'Group B', value: 300 },
-  { name: 'Group C', value: 300 },
-  { name: 'Group D', value: 200 },
+  { name: 'Pop', value: 400 },
+  { name: 'Rap', value: 300 },
+  { name: 'Classique', value: 300 },
+  { name: 'Rock', value: 200 },
 ];
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
@@ -35,7 +35,10 @@ export default class Example extends PureComponent {
 
       <ResponsiveContainer  height="25%">
       <PieChart width={400} height={400}>
-        <Pie
+        <Legend />
+        
+        <Pie 
+          title = "Popularité des Genres Musicaux (en %)"
           data={data}
           cx={200}
           cy={200}

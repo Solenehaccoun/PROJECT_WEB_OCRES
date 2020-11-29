@@ -1,5 +1,5 @@
 import React from 'react';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Tooltip } from 'recharts';
 
 class Widget2 extends React.Component {
 
@@ -26,7 +26,8 @@ class Widget2 extends React.Component {
                     <PolarGrid />
                     <PolarAngleAxis dataKey="continent" />
                     <PolarRadiusAxis />
-                    <Radar name="Mike" dataKey="nbListen" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+                    <Tooltip />
+                    <Radar name="Nombre d'écoutes en millions" dataKey="nbListen" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
                 </RadarChart>
             </ResponsiveContainer>
         );

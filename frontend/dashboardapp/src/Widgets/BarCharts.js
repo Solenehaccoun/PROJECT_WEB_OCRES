@@ -10,11 +10,10 @@ class BarCharts extends React.Component {
         super(props);
         this.state = {
             chartData:  [
-                {name: 'Ariana', value: 600},
-                {name:'Dua Lipa', value: 500},
-                {name:'Black Pumas', value: 200},
-                {name:'Tokyo Hotel', value: 50},
-              
+                {name:'Ariana', value: 56600},
+                {name:'Dua Lipa', value: 1500},
+                {name:'Black Pumas', value: 2000},
+                {name:'Tokyo Hotel', value: 800},
                 ]
             }
         }
@@ -23,8 +22,9 @@ class BarCharts extends React.Component {
     render() {
         return (
             
-            <ResponsiveContainer  height="25%">
-                        <BarChart
+            <ResponsiveContainer>
+            <div className="chart">
+                <BarChart
                             width={500}
                             height={300}
                             data={this.state.chartData}
@@ -38,7 +38,7 @@ class BarCharts extends React.Component {
                     <Tooltip />
                     <Legend />
                     <CartesianGrid strokeDasharray="3 3" />
-                    <Bar dataKey="value" fill="#8884d8" background={{ fill: '#eee' }} />
+                    <Bar name="nombre d'écoutes" dataKey="value" fill="#8884d8" background={{ fill: '#eee' }} />
                 </BarChart>
            
             </ResponsiveContainer>
