@@ -4,6 +4,7 @@ import DonnutCharts from '../Widgets/DonnutCharts';
 import Piechart from '../Widgets/Piechart';
 import Widget1 from '../Widgets/Widget1';
 import Widget2 from '../Widgets/Widget2';
+import AreaChart from '../Widgets/AreaChart';
 
 function Dashboard() {
   return (
@@ -12,8 +13,10 @@ function Dashboard() {
         <div><Widget1/></div>
         <div><Widget2/></div>
         <div><BarCharts/></div>
+        <div><AreaChart/></div>
         <div><DonnutCharts/></div>
         <div><Piechart/></div>
+
     </div>
   );
 }
