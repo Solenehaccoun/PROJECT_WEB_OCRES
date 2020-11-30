@@ -1,32 +1,53 @@
-import React from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput } from 'mdbreact';
+import React, { Component } from 'react';
+import "./Form.css"
+import { Button, Container, Row, Card, Form } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const FormPage = () => {
-return (
-<MDBContainer>
-  <MDBRow>
-    <MDBCol md="6">
-      <form>
-        <p className="h5 text-center mb-4">Ajouter un morceau</p>
-        <div className="grey-text">
-          <MDBInput label="Your name" icon="user" group type="text" validate error="wrong"
-            success="right" />
-          <MDBInput label="Your email" icon="envelope" group type="email" validate error="wrong"
-            success="right" />
-          <MDBInput label="Subject" icon="tag" group type="text" validate error="wrong" success="right" />
-          <MDBInput type="textarea" rows="2" label="Your message" icon="pencil-alt" />
-        </div>
-        <div className="text-center">
-          <MDBBtn outline color="secondary">
-            Send
-            <MDBIcon far icon="paper-plane" className="ml-1" />
-          </MDBBtn>
-        </div>
-      </form>
-    </MDBCol>
-  </MDBRow>
-</MDBContainer>
-);
-};
+//import Form from 'react-bootstrap/Form'
 
-export default FormPage;
+
+
+class Form2 extends Component {
+
+    render() {
+        return (
+            <div className="container_fullDisplay" id="section" style={{ backgroundColor:"blue"}}>
+                 <Container>
+                <h1>Ajouter un morceaux</h1>
+                <br></br>
+              
+                <Form>
+                    <Form.Group controlId="formBasicEmail">
+                      <Form.Label>Email address</Form.Label>
+                      <Form.Control type="email" placeholder="Enter email" />
+                      <Form.Text className="text-muted">
+                        We'll never share your email with anyone else.
+                      </Form.Text>
+                    </Form.Group>
+
+                    <Form.Group controlId="formBasicPassword">
+                      <Form.Label>Password</Form.Label>
+                      <Form.Control type="password" placeholder="Password" />
+                    </Form.Group>
+                    <Form.Group controlId="formBasicCheckbox">
+                      <Form.Check type="checkbox" label="Check me out" />
+                    </Form.Group>
+                    <Button variant="primary" type="submit">
+                      Submit
+                    </Button>
+                </Form> 
+                </Container>    
+            </div> 
+
+           
+        )
+    }
+}
+
+export default Form;
+
+
+
+
+
+

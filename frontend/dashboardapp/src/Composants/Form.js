@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./Form.css"
+//import Form from 'react-bootstrap/Form'
 //import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -13,7 +14,7 @@ class Form extends Component {
                 <br></br>
      
                 <form id="container_form">
-                    <table id="container_table">
+                    <table id="container_table" style={{ height:"50px"}}>
                         <tr id="qu1_titre">
                             <td>Titre du Morceaux : </td>
                             <td><input type="text" name="titre"></input></td>
