@@ -11,6 +11,15 @@ class Form2 extends Component {
 
     render() {
         return (
+
+          <div>
+
+          <div>
+            <h1>Bonjour</h1>
+          </div>
+
+
+
             <div className="container_fullDisplay" id="section" style={{ backgroundColor:"blue"}}>
                  <Container>
                 <h1>Ajouter un morceaux</h1>
@@ -39,7 +48,8 @@ class Form2 extends Component {
                 </Container>    
             </div> 
 
-           
+</div> 
+
         )
     }
 }

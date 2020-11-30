@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
 import "./Form.css"
 //import Form from 'react-bootstrap/Form'
-//import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class Form extends Component {
 
     render() {
         return (
-            <div className="container_fullDisplay" id="section">
 
-                <h1>Ajouter un morceaux</h1>
+
+            
+            <div>
+           
+       
+            <div className="container_fullDisplay" id="section">
+                <header className="form-header">
+                {/* <h1>Ajouter un morceaux</h1> */}
                 <br></br>
      
                 <form id="container_form">
@@ -82,7 +88,10 @@ class Form extends Component {
                     </table>
                 </form>
                             
+            </header>
             </div> 
+            
+            </div>
         )
     }
 }
