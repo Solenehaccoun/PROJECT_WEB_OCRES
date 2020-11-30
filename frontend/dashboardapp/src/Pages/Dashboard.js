@@ -3,6 +3,10 @@ import BarCharts from '../Widgets/BarCharts';
 import Piechart from '../Widgets/Piechart';
 import Widget1 from '../Widgets/Widget1';
 import Widget2 from '../Widgets/Widget2';
+import DonnutCharts from '../Widgets/DonnutCharts';
+import AreaChart from '../Widgets/AreaChart';
+import './Dashboard.css'; 
+import Background from './Images/background.jpg';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,8 +22,28 @@ class Dashboard extends Component {
      
         render() {
         return (
-           <div class = "Container">
-                <div class="Row">
+           <div classname='fullpage' class = "Container" style={{
+            backgroundImage: "url(" + { Background } + ")",
+          }}>
+            <Row classname='firstRow'>
+                <div name="widget1" class="Col-xs-6-md-8"> <Widget1/> </div> 
+                <div class="Col-sm-4"><BarCharts/></div>
+                <div class="Col-xs-6-md-8"><DonnutCharts/></div>
+                <div class="Col-sm"><Piechart/></div>
+                <div class="Col-sm-4"> <Widget2/> </div> 
+                <div class="Col-sm-4"> <AreaChart/> </div> 
+            </Row>
+            </div>
+             
+        )
+    }
+}
+
+
+export default Dashboard;
+
+/*
+<div class="Row">
                    <div class="Col-sm-4"> </div>
                    <div class="Col-sm-8">
                         <div class="Row">
@@ -30,20 +54,9 @@ class Dashboard extends Component {
                         </div>      
                     </div>
                 </div>
-                      <Row>
-                    
-              <div class="Col-sm"><Piechart/></div>
-              <div class="Col-sm-4"> <Widget2/> </div> 
-          
-               </Row>
-            </div>
-             
-        )
-    }
-}
+                */
 
 
-export default Dashboard;
 
         /*  <div><Widget2/></div>
         <div><BarCharts/></div>
