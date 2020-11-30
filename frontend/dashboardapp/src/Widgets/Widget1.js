@@ -23,7 +23,7 @@ class Widget1 extends React.Component {
         return (
             //<ResponsiveContainer  height="25%">
          
-                <LineChart width={600} height={300} data={this.state.chartData}>
+                <LineChart width={400} height={200} data={this.state.chartData}>
                     <Line type="monotone" name="Nombre d'écoutes (en Millions)" dataKey="nbListen" stroke="#8884d8" />
                     <CartesianGrid stroke="#ccc" />
                     <XAxis dataKey="name" />

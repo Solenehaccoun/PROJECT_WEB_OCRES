@@ -1,5 +1,3 @@
-
-
 import React, { Component } from 'react';
 import BarCharts from '../Widgets/BarCharts';
 import Piechart from '../Widgets/Piechart';
@@ -22,19 +20,16 @@ class Dashboard extends Component {
         return (
            <div class = "Container">
                 <div class="Row">
-                   <div class="Col-sm-4"></div>
+                   <div class="Col-sm-4"> </div>
                    <div class="Col-sm-8">
-                   
-                   <div class="Row">
-                   <div class = "Container">
-                    <div class="Col-xs-6-md-8"> <Widget1/> </div> 
-                    <div class="Col-xs-6-md-8"><BarCharts/></div>
-                        </div>
-                    </div>               
-                    
-                      
-                     </div>
-                      </div>
+                        <div class="Row">
+                            <div class = "Container">
+                                <div class="Col-xs-6-md-8"> <Widget1/> </div> 
+                                <div class="Col-xs-6-md-8"><BarCharts/></div>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
                       <Row>
                     
               <div class="Col-sm"><Piechart/></div>
