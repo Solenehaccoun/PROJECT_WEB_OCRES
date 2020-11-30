@@ -1,11 +1,10 @@
 import React from 'react';
 
 import { Button } from './Button';
-import { Widget1 } from '../Widgets/Widget1';
 
 export default {
   title: 'Example/Button',
-  component: Widget1,
+  component: Button,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
@@ -16,5 +15,22 @@ const Template = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
-  label: 'Widget1',
+  label: 'Button',
+};
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  label: 'Button',
+};
+
+export const Large = Template.bind({});
+Large.args = {
+  size: 'large',
+  label: 'Button',
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  size: 'small',
+  label: 'Button',
 };

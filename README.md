@@ -1,23 +1,22 @@
-# Projet de fin de semestre
-
-A lire impérativement avant de commencer quoi que ce soit, ce sont les règles que vous devrez appliquer tout au long du semestre:
-
-<p align="center">
- <a href="https://gitlab.com/Adrien_Kourganoff/instructions_web_ocres_ing4/-/blob/master/README.md">Règles pour le semestre</a>
-</p>
 
 ## Introduction
 
-Ce repo git contient deux repertoires. L'un concerne la partie backend et l'autre la partie frontend.
+Bonjour Monsieur ! 
+Nous esperons que vous allez aprecier notre dashboard :) 
+Nous avons décidé de réaliser un dashboard en lien avec l'application de musique Deezer.
 
-Les deux repertoires ont été initialisé pour vous aider à démarrer le projet dans les meilleures conditions.
 
-Chacun de ces repertoires contient un README.md qui vous pouvez vous approprier. Nous vous encourageons à le faire en y mettant toute les informations nécessaires à la compréhension de votre projet
 
 ## Instructions
 
-Les instructions sont à retrouver dans le pdf instruction.pdf.
+Ne telecharger que le dossier "dashboardapp" pour le lancer (nous aurons le temps de nettoyer l'arborescence du projet pour le back, nous avions peur de faire une mauvaise manip pour l'instant ). Les pdf de capture d'écran de nos wireframes, et Trello s'y trouvent. 
 
-**Le non respect de ces instructions entraînera des pertes de points alors prenez le temps de tout lire et de poser des questions si vous ne comprenez pas**
 
-Pour rappel, la probabilité de recevoir une réponse à un mail envoyé quelques heures avant le rendu est très proche de 0.
+
+Lancer la commande start dans PROJECT_WEB_OCRES - >frontend -> dashboardapp
+
+
+
+## Autre
+
+GitHub nous a posé pas mal de problèmes en plus du fait que nous ne soyons pas très forte toutes les deux mais on à fait de notre mieux pour rattraper ce retard.
