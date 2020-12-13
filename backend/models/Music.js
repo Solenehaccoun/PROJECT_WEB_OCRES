@@ -8,6 +8,8 @@ const musicSchema = mongoose.Schema({
     genre: { type: String, required: true },
     date: { type: Date, required: true },
     pictureUrl: { type: String, required: true },
+    nombreecoute: { type: Number, required: true },
+    continent : { type: String, required: true }
 
 });
 

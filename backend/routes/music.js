@@ -13,6 +13,9 @@ const music = new Music({
   genre: req.body.genre,
   date: req.body.date,
   pictureUrl: req.body.pictureUrl,
+  nombreecoute: req.body.nombreecoute,
+  continent : req.body.continent,
+
 })
   const response= await music.save();
   

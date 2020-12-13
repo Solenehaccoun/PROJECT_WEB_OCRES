@@ -8,7 +8,7 @@ import API from "../api"
 class Form extends Component {
     constructor() { 
         super()
-        this.state={ titre :"", artiste:"", album:"", genre:"", date:"", pictureUrl:""
+        this.state={ titre :"", artiste:"", album:"", genre:"", date:"",nombreecoute:"", continent:"", pictureUrl:"",
             }
 
     }
@@ -39,17 +39,17 @@ class Form extends Component {
                                 </tr>
                                 <tr id="qu2_artiste">
                                     <td>Artiste : </td>
-                                    <td><input type="text" name="artiste" onChange={this.handleChange} value={this.state.titre}></input></td>
+                                    <td><input type="text" name="artiste" onChange={this.handleChange} value={this.state.artiste}></input></td>
                                 </tr>
                                 <tr id="qu3_album">
                                     <td>Album : </td>
-                                    <td><input type="text" name="album" onChange={this.handleChange}value={this.state.titre}></input></td>
+                                    <td><input type="text" name="album" onChange={this.handleChange}value={this.state.album}></input></td>
                                 </tr>
                                 <tr id="qu4_genre4">         
                                     <td>Genre Musical : </td>
                                     <td>
                                         <div class="form-group">
-                                            <select class="form-control" name="genre" onChange={this.handleChange} value={this.state.titre} id="exampleFormControlSelect1">
+                                            <select class="form-control" name="genre" onChange={this.handleChange} value={this.state.genre} id="exampleFormControlSelect1">
                                                 <option>Pop</option>
                                                 <option>Jazz/Blues</option>
                                                 <option>Classique</option>
@@ -73,10 +73,34 @@ class Form extends Component {
                                     <td>Date de Sortie : </td>
                                     <td>
                                         <div class="form-group">
-                                                <input class="form-control" name="date" onChange={this.handleChange} value={this.state.titre} type="date" value="2019-07-21" id="example-date-input"/>
+                                                <input class="form-control" name="date" onChange={this.handleChange} value={this.state.date} type="date" value="2019-07-21" id="example-date-input"/>
                                         </div>
                                     </td>
                                 </tr>
+                                <tr id="qu6_nbr_ecoute">
+                                    <td>Nombre d'écoute: </td>
+                                    <td>
+                                        <div class="form-group">
+                                                <input class="form-control" name="nombreecoute" onChange={this.handleChange} value={this.state.nombreecoute} type="Number" id="example-nmbr-ecoute"/>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="qu7_continent">         
+                                    <td>continent : </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <select class="form-control" name="continent" onChange={this.handleChange} value={this.state.continent} id="examplecontinent">
+                                                <option>Europe</option>
+                                                <option>Asie</option>
+                                                <option>Afrique</option>
+                                                <option>Océanie</option>
+                                                <option>Amérique Latine</option>
+                                                <option>Amérique du Nord</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+  
                                 {/* <tr id="qu6_audio">
                                     <td> Fichier audio (.mp3) : </td>
                                     <td>
@@ -85,11 +109,11 @@ class Form extends Component {
                                         </div>
                                     </td>
                                 </tr> */}
-                                 <tr id="qu7_couverture">
-                                    <td> Couverture (.jpg) : </td>
+                                 <tr id="qu8_couverture">
+                                    <td> Couverture (url) : </td>
                                     <td>
                                         <div class="form-group">
-                                            <input type="text" name="pictureUrl" onChange={this.handleChange} value={this.state.titre} id="picture" />
+                                            <input type="text" name="pictureUrl" onChange={this.handleChange} value={this.state.pictureUrl} id="picture" />
                                         </div>
                                     </td>
                                 </tr> 
