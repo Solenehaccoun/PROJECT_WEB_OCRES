@@ -14,25 +14,25 @@ export default class BarCharts extends React.Component {
     componentDidMount()
     {
    
-        axios.get('http://localhost:3000/music/artiste/Ariana')
+        axios.get('http://localhost:4000/music/artiste/Ariana')
         .then(res => {
         nbAriana=res.data.length;
         this.setState({nbAriana})
         })
 
-        axios.get('http://localhost:3000/music/artiste/Kygo')
+        axios.get('http://localhost:4000/music/artiste/Kygo')
         .then(res => {
         nbKygo=res.data.length;
         this.setState({nbKygo})
         })
 
-        axios.get('http://localhost:3000/music/artiste/Eminem')
+        axios.get('http://localhost:4000/music/artiste/Eminem')
         .then(res => {
         nbEminem=res.data.length;
         this.setState({nbEminem})
         })
 
-        axios.get('http://localhost:3000/music/artiste/Cudder')
+        axios.get('http://localhost:4000/music/artiste/Cudder')
         .then(res => {
         nbCudder=res.data.length;
         this.setState({nbCudder})
@@ -42,15 +42,12 @@ export default class BarCharts extends React.Component {
 
     render() {
 
-        
-    console.log("NB ECOUTE ARIANA = "+nbAriana);
-    console.log("NB ECOUTE EMINEM = "+nbEminem);
     
         const data = [
-            {name:'Ariana', value: "nbAriana"},
-            {name:'Kygo', value: "nbKygo"},
-            {name:'Eminem', value: "nbEminem"},
-            {name:'Cudder', value: "nbCudder"},
+            {name:'Ariana', value: nbAriana},
+            {name:'Kygo', value: nbKygo},
+            {name:'Eminem', value: nbEminem},
+            {name:'Cudder', value: nbCudder},
         ]
 
         return (
