@@ -1,5 +1,5 @@
 var express = require("express");
-const bodyParseur = require('body-parser');
+const bodyParser = require('body-parser');
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
@@ -14,7 +14,6 @@ var usersRouter = require("./routes/users");
 var musicRouter = require("./routes/music");
 
 var app = express();
-app.use(cors());
 
 mongoose.connect(`mongodb+srv://so:${process.env.MONGO_PASS}@cluster0.swbfn.mongodb.net/test?retryWrites=true&w=majority`,
   { useNewUrlParser: true,
@@ -27,6 +26,8 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+app.use(cors());
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);

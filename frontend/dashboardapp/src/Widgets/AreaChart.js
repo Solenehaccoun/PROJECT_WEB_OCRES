@@ -2,36 +2,80 @@ import React, { PureComponent } from 'react';
 import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,
 } from 'recharts';
+import axios from 'axios';
 
-const data = [
-  {
-    name: 'Mars', uv: 4000, pv: 2400, amt: 2400,
-  },
-  {
-    name: 'Avril', uv: 3000, pv: 1398, amt: 2210,
-  },
-  {
-    name: 'Mai', uv: 2000, pv: 9800, amt: 2290,
-  },
-  {
-    name: 'Juin', uv: 2780, pv: 3908, amt: 2000,
-  },
-  {
-    name: 'Juillet', uv: 1890, pv: 4800, amt: 2181,
-  },
-  {
-    name: 'Aout', uv: 2390, pv: 3800, amt: 2500,
-  },
-  {
-    name: 'Sept', uv: 3490, pv: 4300, amt: 2100,
-  },
-];
+let nbEcou2010=0;
+let nbEcou2012=0;
+let nbEcou2014=0;
+let nbEcou2016=0;
+let nbEcou2018=0;
+let nbEcou2020=0;
+
+
 
 export default class Areachart extends PureComponent {
 
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/Lrffmzfc/';
 
+  componentDidMount()
+{
+  axios.get('http://localhost:3000/music/date/2010')
+    .then(res => {
+      nbEcou2010=res.data.length;
+      this.setState({nbEcou2010})
+    })
+    axios.get('http://localhost:3000/music/date/2012')
+    .then(res => {
+      nbEcou2012=res.data.length;
+      this.setState({nbEcou2012})
+    })
+    axios.get('http://localhost:3000/music/date/2014')
+    .then(res => {
+      nbEcou2014=res.data.length;
+      this.setState({nbEcou2014})
+    })
+    axios.get('http://localhost:3000/music/date/2016')
+    .then(res => {
+      nbEcou2016=res.data.length;
+      this.setState({nbEcou2016})
+    })
+    axios.get('http://localhost:3000/music/date/2018')
+    .then(res => {
+      nbEcou2018=res.data.length;
+      this.setState({nbEcou2018})
+    })
+    axios.get('http://localhost:3000/music/date/2020')
+    .then(res => {
+      nbEcou2020=res.data.length;
+      this.setState({nbEcou2020})
+    })
+}
+
+
+
   render() {
+
+    const data = [
+      {
+        name: '2010', listens: nbEcou2010,
+      },
+      {
+        name: '2012', listens: nbEcou2012,
+      },
+      {
+        name: '2014', listens: nbEcou2014,
+      },
+      {
+        name: '2016', listens: nbEcou2016,
+      },
+      {
+        name: '2018', listens: nbEcou2018,
+      },
+      {
+        name: '2020', listens: nbEcou2020,
+      },
+    ];
+
     return (
       <AreaChart
         width={500}
@@ -45,7 +89,7 @@ export default class Areachart extends PureComponent {
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
-        <Area name ="nombre d'écoute de la playlist ZEN depuis Mars" type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
+        <Area name ="nombre d'écoutes depuis 2010" type="monotone" dataKey="listens" stroke="#8884d8" fill="#8884d8" />
       </AreaChart>
     );
   }

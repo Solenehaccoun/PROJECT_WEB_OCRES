@@ -73,7 +73,7 @@ class Form extends Component {
                                     <td>Date de Sortie : </td>
                                     <td>
                                         <div class="form-group">
-                                                <input class="form-control" name="date" onChange={this.handleChange} value={this.state.date} type="date" value="2019-07-21" id="example-date-input"/>
+                                                <input class="form-control" name="date" onChange={this.handleChange} value={this.state.date} type="date" id="example-date-input"/>
                                         </div>
                                     </td>
                                 </tr>
