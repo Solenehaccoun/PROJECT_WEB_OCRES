@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-class BarCharts extends React.Component {
+export default class BarCharts extends React.Component {
 
     constructor(props) {
         super(props);
@@ -39,4 +39,4 @@ class BarCharts extends React.Component {
 
 }
 
-export default BarCharts;
+//export default BarCharts;

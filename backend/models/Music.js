@@ -4,7 +4,7 @@ const musicSchema = mongoose.Schema({
 
     titre : { type: String, required: true },
     artiste: { type: String, required: true }, 
-    album: { type: String, required: true }, 
+    //album: { type: String, required: true }, 
     genre: { type: String, required: true },
     date: { type: Date, required: true },
     pictureUrl: { type: String, required: true },
