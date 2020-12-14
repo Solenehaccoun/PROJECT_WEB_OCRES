@@ -8,7 +8,7 @@ import API from "../api"
 class Form extends Component {
     constructor() { 
         super()
-        this.state={ titre :"", artiste:"", album:"", genre:"", date:"",nombreecoute:"", continent:"", pictureUrl:"",
+        this.state={ titre :"", artiste:"", genre:"", date:"",nombreecoute:"", continent:"", pictureUrl:"",
             }
 
     }
@@ -37,14 +37,12 @@ class Form extends Component {
                                     <td>Titre du Morceaux : </td>
                                     <td><input type="text" name="titre" onChange={this.handleChange} value={this.state.titre}></input></td>
                                 </tr>
+
                                 <tr id="qu2_artiste">
                                     <td>Artiste : </td>
                                     <td><input type="text" name="artiste" onChange={this.handleChange} value={this.state.artiste}></input></td>
                                 </tr>
-                                <tr id="qu3_album">
-                                    <td>Album : </td>
-                                    <td><input type="text" name="album" onChange={this.handleChange}value={this.state.album}></input></td>
-                                </tr>
+
                                 <tr id="qu4_genre4">         
                                     <td>Genre Musical : </td>
                                     <td>
@@ -52,18 +50,19 @@ class Form extends Component {
                                             <select class="form-control" name="genre" onChange={this.handleChange} value={this.state.genre} id="exampleFormControlSelect1">
                                                 <option>Pop</option>
                                                 <option>Jazz/Blues</option>
+                                                <option>Variété Francaise</option>
                                                 <option>Classique</option>
                                                 <option>Rap</option>
                                                 <option>Rock</option>
                                                 <option>RnB</option>
-                                                <option>Métal</option>
+                                                <option>Hip Hop</option>
                                                 <option>Electro</option>
                                                 <option>Afro</option>
-                                                <option>Country</option>
-                                                <option>Disco</option>
+                                                <option>Funk</option>
+                                                <option>House</option>
                                                 <option>Folk</option>
                                                 <option>K-pop</option>
-                                                <option>Oriental</option>
+                                                <option>Reggaeton</option>
                                                 <option>Divers</option>
                                             </select>
                                         </div>
