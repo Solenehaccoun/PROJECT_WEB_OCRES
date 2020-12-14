@@ -43,6 +43,15 @@ const getTitle =(req,res)=>{
 	});
 }
 
+const getContinent =(req,res)=>{
+    const continent = req.params.title;
+	console.log(continent);
+	musicmodel.find({continent},(err,music)=>
+	{
+		res.status(200).json(music);
+	});
+}
+
 
 const getGenCont = (req,res) =>{
 	const genre = req.params.genre;
@@ -63,4 +72,4 @@ const deleteOneMusic =(req,res)=>{
 }
 
 
-module.exports = {getAllMusics, getOneMusic, getArtiste, getTitle, getGenre, getGenCont, deleteOneMusic}
+module.exports = {getAllMusics, getOneMusic, getArtiste, getTitle, getContinent, getGenre, getGenCont, deleteOneMusic}
