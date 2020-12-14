@@ -6,6 +6,8 @@ import BarCharts from './Widgets/BarCharts';
 import Piechart from './Widgets/Piechart';
 import Widget1 from './Widgets/Widget1';
 import Widget2 from './Widgets/Widget2';
+
+
 //import Compteur from './Widgets/Compteur';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Dash.css"

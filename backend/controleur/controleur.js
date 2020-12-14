@@ -44,8 +44,9 @@ const getTitle =(req,res)=>{
 }
 
 const getContinent =(req,res)=>{
-    const continent = req.params.title;
+    const continent = req.params.continent;
 	console.log(continent);
+	console.log("hello");
 	musicmodel.find({continent},(err,music)=>
 	{
 		res.status(200).json(music);

@@ -10,7 +10,7 @@ let nbEcou2014=0;
 let nbEcou2016=0;
 let nbEcou2018=0;
 let nbEcou2020=0;
-let dateMusic = new Date();
+let dateMusic;
 let yearMusic;
 
 
@@ -25,42 +25,113 @@ export default class Areachart extends PureComponent {
     .then(res => {
       for(var i=0; i<res.data.length; i++)
       {
-        dateMusic=res.data[i].date;
-        yearMusic=dateMusic.getFullYear;
-        console.log('heoooo');
+        dateMusic= new Date(res.data[i].date);
+        yearMusic=dateMusic.getFullYear();
         if(yearMusic==2010)
         {
           nbEcou2010+=res.data[i].nombreecoute;
         }
+        if(yearMusic==2012)
+        {
+          nbEcou2012+=res.data[i].nombreecoute;
+        }
+        if(yearMusic==2014)
+        {
+          nbEcou2014+=res.data[i].nombreecoute;
+        }
+        if(yearMusic==2016)
+        {
+          nbEcou2016+=res.data[i].nombreecoute;
+        }
+        if(yearMusic==2018)
+        {
+          nbEcou2018+=res.data[i].nombreecoute;
+        }
+        if(yearMusic==2020)
+        {
+          nbEcou2020+=res.data[i].nombreecoute;
+        }
       }
       this.setState({nbEcou2010})
+      this.setState({nbEcou2012})
+      this.setState({nbEcou2014})
+      this.setState({nbEcou2016})
+      this.setState({nbEcou2018})
+      this.setState({nbEcou2020})
+    })
+
+    /* axios.get('http://localhost:4000/music')
+    .then(res => {
+      for(var i=0; i<res.data.length; i++)
+      {
+        dateMusic= new Date(res.data[i].date);
+        yearMusic=dateMusic.getFullYear();
+        if(yearMusic==2012)
+        {
+          nbEcou2012+=res.data[i].nombreecoute;
+        }
+      }
+      console.log(nbEcou2012);
+      this.setState({nbEcou2012})
     })
 
     axios.get('http://localhost:4000/music')
     .then(res => {
-      nbEcou2012=res.data[2].nombreecoute;
-      this.setState({nbEcou2012})
-    })
-    axios.get('http://localhost:3000/music/date/2014')
-    .then(res => {
-      nbEcou2014=res.data.length;
+      for(var i=0; i<res.data.length; i++)
+      {
+        dateMusic= new Date(res.data[i].date);
+        yearMusic=dateMusic.getFullYear();
+        if(yearMusic==2014)
+        {
+          nbEcou2014+=res.data[i].nombreecoute;
+        }
+      }
       this.setState({nbEcou2014})
     })
-    axios.get('http://localhost:3000/music/date/2016')
+
+    axios.get('http://localhost:4000/music')
     .then(res => {
-      nbEcou2016=res.data.length;
+      for(var i=0; i<res.data.length; i++)
+      {
+        dateMusic= new Date(res.data[i].date);
+        yearMusic=dateMusic.getFullYear();
+
+        if(yearMusic==2016)
+        {
+          nbEcou2016+=res.data[i].nombreecoute;
+        }
+      }
       this.setState({nbEcou2016})
     })
-    axios.get('http://localhost:3000/music/date/2018')
+    axios.get('http://localhost:4000/music/date')
     .then(res => {
-      nbEcou2018=res.data.length;
+      for(var i=0; i<res.data.length; i++)
+      {
+        dateMusic= new Date(res.data[i].date);
+        yearMusic=dateMusic.getFullYear();
+
+        if(yearMusic==2018)
+        {
+          nbEcou2018+=res.data[i].nombreecoute;
+        }
+      }
       this.setState({nbEcou2018})
     })
-    axios.get('http://localhost:3000/music/date/2020')
+    axios.get('http://localhost:4000/music')
     .then(res => {
-      nbEcou2020=res.data.length;
+      for(var i=0; i<res.data.length; i++)
+      {
+        dateMusic= new Date(res.data[i].date);
+        yearMusic=dateMusic.getFullYear();
+        console.log(yearMusic);
+        console.log("heo2020ooo");
+        if(yearMusic==2020)
+        {
+          nbEcou2020+=res.data[i].nombreecoute;
+        }
+      }
       this.setState({nbEcou2020})
-    })
+    }) */
 }
 
 
