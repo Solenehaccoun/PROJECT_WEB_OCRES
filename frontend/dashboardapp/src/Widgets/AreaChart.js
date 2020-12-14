@@ -10,6 +10,8 @@ let nbEcou2014=0;
 let nbEcou2016=0;
 let nbEcou2018=0;
 let nbEcou2020=0;
+let dateMusic = new Date();
+let yearMusic;
 
 
 
@@ -19,14 +21,24 @@ export default class Areachart extends PureComponent {
 
   componentDidMount()
 {
-  axios.get('http://localhost:3000/music/date/2010')
+  axios.get('http://localhost:4000/music')
     .then(res => {
-      nbEcou2010=res.data.length;
+      for(var i=0; i<res.data.length; i++)
+      {
+        dateMusic=res.data[i].date;
+        yearMusic=dateMusic.getFullYear;
+        console.log('heoooo');
+        if(yearMusic==2010)
+        {
+          nbEcou2010+=res.data[i].nombreecoute;
+        }
+      }
       this.setState({nbEcou2010})
     })
-    axios.get('http://localhost:3000/music/date/2012')
+
+    axios.get('http://localhost:4000/music')
     .then(res => {
-      nbEcou2012=res.data.length;
+      nbEcou2012=res.data[2].nombreecoute;
       this.setState({nbEcou2012})
     })
     axios.get('http://localhost:3000/music/date/2014')

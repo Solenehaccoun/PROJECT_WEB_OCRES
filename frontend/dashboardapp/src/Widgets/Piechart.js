@@ -1,12 +1,11 @@
 import React, { PureComponent } from 'react';
 import {PieChart, Pie, Sector, Cell, Legend, ResponsiveContainer} from 'recharts';
+import axios from 'axios';
 
-const data = [
-  { name: 'Pop', value: 400 },
-  { name: 'Rap', value: 300 },
-  { name: 'Classique', value: 300 },
-  { name: 'Rock', value: 200 },
-];
+let nbPop=0;
+let nbRap=0;
+let nbRnB=0;
+let nbHouse=0;
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
@@ -28,9 +27,46 @@ const renderCustomizedLabel = ({
 export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/c9pL8k61/';
 
+  componentDidMount()
+    {
+        axios.get('http://localhost:4000/music/genre/Pop')
+        .then(res => {
+        nbPop=res.data.length;
+        this.setState({nbPop})
+        })
+
+        axios.get('http://localhost:4000/music/genre/Rap')
+        .then(res => {
+        nbRap=res.data.length;
+        this.setState({nbRap})
+        })
+
+        axios.get('http://localhost:4000/music/genre/RnB')
+        .then(res => {
+        nbRnB=res.data.length;
+        this.setState({nbRnB})
+        })
+
+        axios.get('http://localhost:4000/music/genre/House')
+        .then(res => {
+        nbHouse=res.data.length;
+        this.setState({nbHouse})
+        })
+    }
+
   render() {
+
+    const data = [
+      { name: 'Pop', value: nbPop },
+      { name: 'Rap', value: nbRap },
+      { name: 'RnB', value: nbRnB },
+      { name: 'House', value: nbHouse },
+    ];
+    
+
     return (
 
+      
       //<ResponsiveContainer  height="25%">
       <PieChart width={400} height={400}>
         <Legend />

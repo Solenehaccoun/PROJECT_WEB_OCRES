@@ -11,6 +11,7 @@ router.get("/:id",MusicControl.getOneMusic);
 router.get("/artiste/:artiste",MusicControl.getArtiste);
 router.get("/titre/:titre",MusicControl.getTitle);
 router.get("/genre/:genre",MusicControl.getGenre);
+router.get("/continent/:continent",MusicControl.getContinent);
 router.get("/genre/:genre/:continent",MusicControl.getGenCont);
 
 //Delete avec ID

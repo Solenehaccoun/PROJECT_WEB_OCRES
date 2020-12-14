@@ -14,27 +14,39 @@ export default class BarCharts extends React.Component {
     componentDidMount()
     {
    
-        axios.get('http://localhost:3000/music/artiste/Ariana')
+        axios.get('http://localhost:4000/music/artiste/Ariana')
         .then(res => {
-        nbAriana=res.data.length;
+        for(var i=0; i<res.data.length; i++)
+        {
+            nbAriana+=res.data[i].nombreecoute;
+        }
         this.setState({nbAriana})
         })
 
-        axios.get('http://localhost:3000/music/artiste/Kygo')
+        axios.get('http://localhost:4000/music/artiste/Kygo')
         .then(res => {
-        nbKygo=res.data.length;
+            for(var i=0; i<res.data.length; i++)
+            {
+                nbKygo+=res.data[i].nombreecoute;
+            }
         this.setState({nbKygo})
         })
 
-        axios.get('http://localhost:3000/music/artiste/Eminem')
+        axios.get('http://localhost:4000/music/artiste/Eminem')
         .then(res => {
-        nbEminem=res.data.length;
+            for(var i=0; i<res.data.length; i++)
+            {
+                nbEminem+=res.data[i].nombreecoute;
+            }
         this.setState({nbEminem})
         })
 
-        axios.get('http://localhost:3000/music/artiste/Cudder')
+        axios.get('http://localhost:4000/music/artiste/Cudder')
         .then(res => {
-        nbCudder=res.data.length;
+            for(var i=0; i<res.data.length; i++)
+            {
+                nbCudder+=res.data[i].nombreecoute;
+            }
         this.setState({nbCudder})
         })
     }
@@ -45,12 +57,12 @@ export default class BarCharts extends React.Component {
         
     console.log("NB ECOUTE ARIANA = "+nbAriana);
     console.log("NB ECOUTE EMINEM = "+nbEminem);
-    
+
         const data = [
-            {name:'Ariana', value: "nbAriana"},
-            {name:'Kygo', value: "nbKygo"},
-            {name:'Eminem', value: "nbEminem"},
-            {name:'Cudder', value: "nbCudder"},
+            {name:'Ariana', value: nbAriana},
+            {name:'Kygo', value: nbKygo},
+            {name:'Eminem', value: nbEminem},
+            {name:'Cudder', value: nbCudder},
         ]
 
         return (
